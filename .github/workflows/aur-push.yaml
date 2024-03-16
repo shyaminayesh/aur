@@ -1,0 +1,16 @@
+name: aur-push
+
+on:
+  push:
+    paths:
+      - "*/PKGBUILD"
+
+
+jobs:
+  srcinfo:
+    name: srcinfo
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Checkout
+        run: ls -all
