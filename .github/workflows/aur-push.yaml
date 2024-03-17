@@ -11,6 +11,6 @@ jobs:
     name: srcinfo
     runs-on: ubuntu-latest
     steps:
-      - uses: enkodin/action-archlinux@v3
+      - uses: enkodin/action-archlinux@v4
       - name: Test
         run: pwd
