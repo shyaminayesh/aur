@@ -13,4 +13,6 @@ jobs:
     steps:
       - name: Test
         uses: actions/action-archlinux@v2
+
+      - name: gg
         run: cat /etc/os-release
