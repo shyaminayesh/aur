@@ -13,4 +13,4 @@ jobs:
     steps:
       - uses: enkodin/action-archlinux@v1
       - name: Test
-        run: cat /etc/os-releases
+        run: uname -a
