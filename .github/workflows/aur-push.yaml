@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test
-        uses: actions/action-archlinux@v2
+        uses: enkodin/action-archlinux@v2
 
       - name: gg
         run: cat /etc/os-release
