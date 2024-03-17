@@ -11,10 +11,6 @@ jobs:
     name: srcinfo
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        run: echo ${{ env.paths }}
-
       - name: Test
         uses: actions/action-archlinux@v2
         run: cat /etc/os-release
