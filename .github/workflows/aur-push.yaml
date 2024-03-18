@@ -16,8 +16,8 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
-      - name: Print
+      - name: printsrc
         uses: enkodin/action-archlinux-makepkg@v1
         with:
-          cmd: "--arg"
+          cmd: "--printsrc"
           package: "ddnsc"
