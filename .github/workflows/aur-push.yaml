@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "*/PKGBUILD"
+  workflow_dispatch
 
 
 jobs:
@@ -11,6 +12,6 @@ jobs:
     name: srcinfo
     runs-on: ubuntu-latest
     steps:
-      - uses: enkodin/action-archlinux@v4
+      - uses: enkodin/action-archlinux@v1
       - name: Test
         run: pwd
