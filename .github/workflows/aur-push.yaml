@@ -12,6 +12,11 @@ jobs:
     name: srcinfo
     runs-on: ubuntu-latest
     steps:
-      - uses: enkodin/action-archlinux@v1
-      - name: Test
-        run: pwd
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: Print
+        uses: enkodin/action-archlinux-makepkg@v1
+        with:
+          cmd: "--arg"
