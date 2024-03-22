@@ -8,19 +8,21 @@ on:
 
 
 jobs:
-  srcinfo:
-    name: srcinfo
+
+  makepkg:
+    name: makepkg
     runs-on: ubuntu-latest
     steps:
 
       - name: checkout
         uses: actions/checkout@v2
 
-      - name: Prepare
+      - name: prepare
         uses: jitterbit/get-changed-files@v1
         with:
           format: "json"
-        run: echo "${{ steps.abc.outputs.modified }}"
+        run: |
+          echo "${{ steps.abc.outputs.modified }}"
 
       - name: printsrc
         uses: enkodin/action-archlinux-makepkg@v1
