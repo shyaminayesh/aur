@@ -1,10 +1,9 @@
-name: aur-push
+name: aur-publish
 
 on:
   push:
     paths:
       - "*/PKGBUILD"
-  workflow_dispatch:
 
 
 jobs:
