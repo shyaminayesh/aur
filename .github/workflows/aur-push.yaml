@@ -23,11 +23,8 @@ jobs:
         with:
           format: 'json'
 
-      - name: debug
-        run: echo ${{ steps.files.outputs.added_modified }}
-
       - name: printsrc
         uses: enkodin/action-archlinux-makepkg@v1
         with:
           cmd: "--printsrc"
-          package: "ddnsc"
+          pkgbuilds: ${{ steps.files.outputs.added_modified }}
