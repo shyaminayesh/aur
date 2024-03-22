@@ -17,14 +17,14 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
-      - name: prepare
-        id: prepare
+      - id: files
+        name: files
         uses: jitterbit/get-changed-files@v1
         with:
           format: "json"
 
       - name: debug
-        run: echo "${{ steps.prepare.outputs.modified }}"
+        run: echo ${{ steps.files.outputs.all }}
 
       - name: printsrc
         uses: enkodin/action-archlinux-makepkg@v1
