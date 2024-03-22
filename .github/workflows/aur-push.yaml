@@ -21,7 +21,7 @@ jobs:
         name: files
         uses: jitterbit/get-changed-files@v1
         with:
-          format: "json"
+          format: 'json'
 
       - name: debug
         run: echo ${{ steps.files.outputs.all }}
