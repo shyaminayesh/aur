@@ -24,7 +24,7 @@ jobs:
           format: 'json'
 
       - name: debug
-        run: echo ${{ steps.files.outputs.all }}
+        run: echo ${{ steps.files.outputs.added_modified }}
 
       - name: printsrc
         uses: enkodin/action-archlinux-makepkg@v1
