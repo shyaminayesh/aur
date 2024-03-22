@@ -22,6 +22,9 @@ jobs:
         with:
           format: "json"
 
+      - name: debug
+        run: echo "${{ steps.abc.outputs.modified }}"
+
       - name: printsrc
         uses: enkodin/action-archlinux-makepkg@v1
         with:
