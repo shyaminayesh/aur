@@ -16,6 +16,12 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
+      - name: Prepare
+        uses: jitterbit/get-changed-files@v1
+        with:
+          format: "json"
+        run: echo "${{ steps.abc.outputs.modified }}"
+
       - name: printsrc
         uses: enkodin/action-archlinux-makepkg@v1
         with:
