@@ -1,0 +1,19 @@
+name: version-check
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+
+
+jobs:
+
+  nvmchecker:
+    name: nvmchecker
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: check
+        run: echo "running"
