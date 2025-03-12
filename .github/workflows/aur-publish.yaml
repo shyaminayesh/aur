@@ -25,5 +25,6 @@ jobs:
       - name: printsrc
         uses: enkodin/makepkg@dev
         with:
-          command: "--printsrc"
+          src: true
+          publish: true
           files: ${{ steps.files.outputs.added_modified }}
