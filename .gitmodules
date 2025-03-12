@@ -1,3 +1,0 @@
-[submodule "kubesec-bin"]
-	path = kubesec-bin
-	url = ssh://aur@aur.archlinux.org/kubesec-bin.git
