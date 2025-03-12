@@ -1,0 +1,16 @@
+# Maintainer: Shyamin Ayesh <me@shyamin.com>
+
+pkgname="kubesec-bin"
+pkgdesc="Security risk analysis for Kubernetes resources"
+pkgver=2.14.2
+pkgrel=1
+arch=("x86_64")
+license=("Apache-2.0")
+url="https://github.com/controlplaneio/kubesec"
+source=("$url/archive/v$pkgver.tar.gz")
+source=("${url}/releases/download/v${pkgver}/kubesec_linux_amd64.tar.gz")
+sha256sums=("bc252e35f01bc4f133a49404315da3ccfed0209cc9baba33883eaeca0656f35c")
+
+package() {
+    install -D "$srcdir"/kubesec "$pkgdir"/usr/bin/kubesec
+}
