@@ -14,3 +14,4 @@ sha256sums=("bc252e35f01bc4f133a49404315da3ccfed0209cc9baba33883eaeca0656f35c")
 package() {
     install -D "$srcdir"/kubesec "$pkgdir"/usr/bin/kubesec
 }
+
