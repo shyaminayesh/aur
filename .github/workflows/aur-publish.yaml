@@ -23,7 +23,7 @@ jobs:
           format: 'json'
 
       - name: printsrc
-        uses: enkodin/action-archlinux-makepkg@v1
+        uses: enkodin/makepkg@dev
         with:
-          cmd: "--printsrc"
-          pkgbuilds: ${{ steps.files.outputs.added_modified }}
+          command: "--printsrc"
+          files: ${{ steps.files.outputs.added_modified }}
